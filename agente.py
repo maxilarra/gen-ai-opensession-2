@@ -15,28 +15,32 @@ load_dotenv()
 openai_key = os.getenv("OPENAI_API_KEY")
 
 @tool
-def peliculas(word: str) -> str:
-    """"""
+def peliculas(query: str) -> str:
+    """Busca información relacionada con películas."""
     return ""
 
-@tool
-def libros(word: str) -> str:
-    """"""
-    return ""
 
 @tool
-def recetas(word: str) -> str:
-    """"""
-    return "" 
+def libros(query: str) -> str:
+    """Busca información relacionada con libros."""
+    return ""
+
+
+@tool
+def recetas(query: str) -> str:
+    """Busca información relacionada con recetas de cocina."""
+    return ""
+
 
 @tool
 def clima(word: str) -> str:
-    """"""
+    """Busca información relacionada con el clima."""
     return ""
 
+
 @tool
-def paises(word: str) -> str:
-    """"""
+def paises(query: str) -> str:
+    """Busca información relacionada con países."""
     return ""
 
 
