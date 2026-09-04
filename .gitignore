@@ -1,0 +1,24 @@
+# Secretos
+.env
+.env.local
+.env.*.local
+
+# Node
+node_modules/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.Python
+
+# Entornos y editores
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# SO
+.DS_Store
+Thumbs.db
