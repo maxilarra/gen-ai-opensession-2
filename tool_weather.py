@@ -15,6 +15,11 @@ load_dotenv()
 openai_key = os.getenv("OPENAI_API_KEY")
 
 @tool
+def count_r_in_word(word: str) -> int:
+    """Count how many 'r' letters are in the given word."""
+    return word.lower().count('r')
+
+@tool
 def weather_tool(city: str) -> str:
     """
     Retrieve current weather for a city using Open-Meteo.
@@ -43,6 +48,41 @@ def weather_tool(city: str) -> str:
 
     return f"Current weather in {city}: {temp}°C, wind {wind} km/h, condition code {condition}"
 
+
+@tool
+def convert_temperature(celsius: float, to_fahrenheit: bool = True) -> float:
+    """
+    Convert temperature between Celsius and Fahrenheit.
+    If to_fahrenheit=True, converts Celsius to Fahrenheit.
+    If to_fahrenheit=False, converts Fahrenheit to Celsius.
+    Returns the converted temperature.
+    """
+    if to_fahrenheit:
+        fahrenheit = (celsius * 9/5) + 32
+        return round(fahrenheit, 2)
+    else:
+        celsius_result = (celsius - 32) * 5/9
+        return round(celsius_result, 2)
+
+
+@tool
+def analyze_text(text: str) -> dict:
+    """
+    Analyze text and return statistics: word count, character count,
+    character count without spaces, and average word length.
+    """
+    words = text.split()
+    word_count = len(words)
+    char_count = len(text)
+    char_count_no_spaces = len(text.replace(" ", ""))
+    avg_word_length = char_count_no_spaces / word_count if word_count > 0 else 0
+
+    return {
+        "word_count": word_count,
+        "character_count": char_count,
+        "character_count_no_spaces": char_count_no_spaces,
+        "average_word_length": round(avg_word_length, 2)
+    }
 
 
 class AgentState(TypedDict):
@@ -99,3 +139,8 @@ print("=" * 80)
 user_query = "How is the weather in Madrid and how many r are in 'love'?"
 stream_tool_responses(user_query)
 
+print("=" * 80)
+print("Test 2: Temperature conversion and text analysis")
+print("=" * 80)
+user_query = "Convert 72 Fahrenheit to Celsius and analyze this text: 'The quick brown fox jumps over the lazy dog'"
+stream_tool_responses(user_query)
