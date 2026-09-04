@@ -34,6 +34,7 @@ def clima(word: str) -> str:
     """"""
     return ""
 
+@tool
 def paises(word: str) -> str:
     """"""
     return ""
