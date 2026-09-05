@@ -1,5 +1,6 @@
 # Secretos
 .env
+.env312
 .env.local
 .env.*.local
 
