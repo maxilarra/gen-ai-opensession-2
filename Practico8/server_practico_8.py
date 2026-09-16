@@ -2,7 +2,7 @@ from typing import Any
 
 import httpx
 from mcp.server.fastmcp import FastMCP
-
+mcp = FastMCP("Product Server")
 
 @mcp.tool()
 async def get_product_by_name(name: str) -> list:
