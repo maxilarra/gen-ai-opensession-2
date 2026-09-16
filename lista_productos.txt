@@ -1,0 +1,12 @@
+PRODUCTOS = [
+    {"id": 1, "nombre": "Teclado mecánico Logitech G413", "categoria": "Teclados", "precio": 1850.0, "stock": 12},
+    {"id": 2, "nombre": "Teclado Redragon Kumara K552", "categoria": "Teclados", "precio": 950.0, "stock": 0},
+    {"id": 3, "nombre": "Mouse Logitech G305", "categoria": "Mouses", "precio": 780.0, "stock": 25},
+    {"id": 4, "nombre": "Mouse Razer DeathAdder Essential", "categoria": "Mouses", "precio": 650.0, "stock": 8},
+    {"id": 5, "nombre": "Monitor Samsung Odyssey 27\"", "categoria": "Monitores", "precio": 4500.0, "stock": 5},
+    {"id": 6, "nombre": "Monitor LG UltraGear 24\"", "categoria": "Monitores", "precio": 3200.0, "stock": 0},
+    {"id": 7, "nombre": "Monitor Dell S2721DGF 27\"", "categoria": "Monitores", "precio": 6100.0, "stock": 3},
+    {"id": 8, "nombre": "Auriculares HyperX Cloud II", "categoria": "Audio", "precio": 1650.0, "stock": 15},
+    {"id": 9, "nombre": "Parlantes Logitech Z313", "categoria": "Audio", "precio": 890.0, "stock": 0},
+    {"id": 10, "nombre": "Notebook Lenovo IdeaPad 3", "categoria": "Notebooks", "precio": 14500.0, "stock": 4},
+]
