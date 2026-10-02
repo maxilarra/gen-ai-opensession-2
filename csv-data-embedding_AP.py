@@ -21,7 +21,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-#se utiliza para autenticarse automáticamente en la plataforma de Hugging Face
+#se utiliza para autenticarse automáticamente en la plataforma de Hugging Face para utilizar al modelo de embeddings a traves de ellos.
 login(token=os.getenv("HF_TOKEN"))
 
 
@@ -50,7 +50,7 @@ print("Configuración de Pinecone completada")
 
 
 # region Cargado del índice y prueba Unid 5 Demo 5
-
+# utilizando el modelo de embbedings "sentence-transformers/all-MiniLM-L6-v2" de Hugging Face para generar representaciones vectoriales de texto.
 embedding_model = HuggingFaceEmbeddings(
     model_name="sentence-transformers/all-MiniLM-L6-v2"
 )
